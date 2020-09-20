@@ -13,6 +13,7 @@ require 'gmail.smtp.php';
 
  
 foreach($recipients as $item=>$recipient){    
+    $recipient['sender']='Cecytemorelos';
     $recipient['subject']='Cuentas de acceso';
     $recipient['message']= getPersonalizedMessage($recipient);
     sendEmailMessage($recipient);

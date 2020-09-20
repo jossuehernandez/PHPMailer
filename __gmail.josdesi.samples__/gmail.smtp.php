@@ -18,8 +18,8 @@ function sendEmailMessage($recipient){
         $mail->Port       = 587;
 
         //Recipients
-        $mail->setFrom('noreply@cecytemorelos.com.mx', 'Mailer');
-        $mail->addAddress($recipient['email'], '');
+        $mail->setFrom('noreply@cecytemorelos.com.mx', );
+        $mail->addAddress($recipient['email'], $recipient['sender']);
 
 
         $mail->SMTPOptions = array(
