@@ -10,7 +10,7 @@ function sendEmailMessage($recipient){
         $mail->SMTPDebug = 0;                      
         $mail->isSMTP(); 
         $mail->Mailer = "smtp";                                           
-        $mail->Host       = 'smtp.gmail.com';
+        $mail->Host       = 'smtp.gmail.com';                    
         $mail->SMTPAuth   = true;                                   
         $mail->Username   = 'victor98456.storage@gmail.com';                     
         $mail->Password   = 'Ortiz98@!';                               
