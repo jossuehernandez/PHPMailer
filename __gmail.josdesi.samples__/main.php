@@ -8,7 +8,7 @@ require '../src/PHPMailer.php';
 require '../src/SMTP.php';
 require 'recipients.php';
 require 'message.php';
-require 'gmail.smtp.php';
+require 'main.smtp.php';
 
 
  

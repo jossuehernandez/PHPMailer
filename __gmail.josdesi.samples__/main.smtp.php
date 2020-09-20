@@ -35,7 +35,7 @@ function sendEmailMessage($recipient){
         $mail->Body    = $recipient['message'];
         // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-        $mail->send();
+        // $mail->send();
         echo 'Message has been sent to '.$recipient['email'].' ---> SUCCESS';		
         echo '<br>';
     } catch (Exception $e) {
