@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require '../src/Exception.php';
 require '../src/PHPMailer.php';
 require '../src/SMTP.php';
-require 'recipients.php';
+require 'recipients.cecytemorelos.php';
 require 'message.php';
 require 'main.smtp.php';
 
@@ -14,7 +14,7 @@ require 'main.smtp.php';
  
 foreach($recipients as $item=>$recipient){    
     $recipient['sender']='Cecytemorelos';
-    $recipient['subject']='Cuentas de acceso';
+    $recipient['subject']='Cuenta de acceso';
     $recipient['message']= getPersonalizedMessage($recipient);
     sendEmailMessage($recipient);
 }

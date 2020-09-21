@@ -10,15 +10,15 @@ function sendEmailMessage($recipient){
         $mail->SMTPDebug = 0;                      
         $mail->isSMTP(); 
         $mail->Mailer = "smtp";                                           
-        $mail->Host       = 'smtp.gmail.com';
+        $mail->Host       = 'email-smtp.us-east-1.amazonaws.com';                    
         $mail->SMTPAuth   = true;                                   
-        $mail->Username   = 'victor98456.storage@gmail.com';                     
-        $mail->Password   = 'Ortiz98@!';                               
-        $mail->SMTPSecure = 'tls';    
+        $mail->Username   = 'AKIA2O5OBYLPGQGIWUVP';                     
+        $mail->Password   = 'BLEd7CqBEo7oBg9oVl+4f2zEna58f+7htbTgJYovMSJr';                               
+        $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
-        //Recipients
-        $mail->setFrom('noreply@cecytemorelos.com.mx', $recipient['sender']);
+        //Recipients        
+        $mail->setFrom('noreply@lakmisystems.com', $recipient['sender']);
         $mail->addAddress($recipient['email'], '');
 
 
@@ -35,11 +35,15 @@ function sendEmailMessage($recipient){
         $mail->Body    = $recipient['message'];
         // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-        // $mail->send();
-        echo 'Message has been sent to '.$recipient['email'].' ---> SUCCESS';		
+        $mail->send();
+        // echo '<meta charset="ISO-8859-1">';
+        echo 'Message has been sent to '.$recipient['email'].' ---> SUCCESS';       
+        echo '<br>';
+        // echo $recipient['message'];
         echo '<br>';
     } catch (Exception $e) {
         echo 'Message has been sent to '.$recipient['email'].' ---> ERROR';
+        echo '<br>';
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 }
